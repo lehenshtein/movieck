@@ -1,0 +1,22 @@
+@import "../../../styles"
+.movie
+  &__primary-text
+    color: $primary-color
+    font-weight: bold
+  &__left
+    display: inline-block
+    max-width: 50%
+    width: 100%
+    vertical-align: top
+  &__right
+    display: inline-block
+    max-width: 50%
+    width: 100%
+    vertical-align: top
+  &__genre
+    position: relative
+    &:before
+      content: ', '
+    &:nth-of-type(1n)
+      &:before
+        content: ''

@@ -1,0 +1,38 @@
+<div class="movie">
+  <div class="movie__left">
+    <p>
+      <span class="movie__primary-text">Title: </span>
+      {{movieData.title}}
+    </p>
+    <p>
+      <span class="movie__primary-text">Original title: </span>
+      {{movieData.original_title}}
+    </p>
+    <p>
+      <span class="movie__primary-text">Genres: </span>
+      <span class="movie__genre" *ngFor="let g of movieData.genres">{{g.name}}</span>
+    </p>
+    <p>
+      {{movieData.overview}}
+    </p>
+    <p>
+      <span class="movie__primary-text">Date of release: </span>
+      {{movieData.release_date}}
+    </p>
+    <p>
+      <span class="movie__primary-text">Popularity: </span>
+      {{movieData.popularity}}
+    </p>
+    <p>
+      <span class="movie__primary-text">Votes: </span>
+      {{movieData.vote_count}}
+      <span class="movie__primary-text"> / Rate: </span>
+      {{movieData.vote_average}}
+    </p>
+
+  </div>
+  <div class="movie__right">
+    <img src="{{imgLink + movieData.poster_path}}" alt="">
+  </div>
+</div>
+
